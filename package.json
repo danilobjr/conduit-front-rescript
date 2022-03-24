@@ -12,6 +12,9 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
+    "re:build": "rescript",
+    "re:watch": "rescript build -w",
+    "re:clean": "rescript clean -with-deps",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -34,5 +37,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "rescript": "9.1.4"
   }
 }
