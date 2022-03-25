@@ -1,4 +1,6 @@
+Theme.setGlobalStyles()
+
 @react.component
 let make = () => {
-  <h1> {"Hello from rescript!"->React.string} </h1>
+  <Button> "Sign in" </Button>
 }
