@@ -2,7 +2,10 @@ open CssJs
 
 module Colors = {
   let primary = "477bff"
+  let black = "131128"
   let white = "fff"
+  let neutral = "282c3c"
+  let neutral200 = "aeb3c9"
 }
 
 module Font = {

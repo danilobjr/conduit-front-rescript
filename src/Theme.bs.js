@@ -4,7 +4,10 @@ import * as CssJs from "bs-css-emotion/src/CssJs.bs.js";
 
 var Colors = {
   primary: "477bff",
-  white: "fff"
+  black: "131128",
+  white: "fff",
+  neutral: "282c3c",
+  neutral200: "aeb3c9"
 };
 
 var family = {
