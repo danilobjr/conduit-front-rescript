@@ -13,13 +13,24 @@ function App(Props) {
         return "";
       });
   var setEmail = match[1];
+  var match$1 = React.useState(function () {
+        return "";
+      });
+  var setPassword = match$1[1];
   var handleEmailChange = function (param) {
-    return JsxUtils.getValue(setEmail, param);
+    return JsxUtils.getTargetValue(setEmail, param);
+  };
+  var handlePasswordChange = function (param) {
+    return JsxUtils.getTargetValue(setPassword, param);
   };
   return React.createElement("div", undefined, React.createElement(InputText.make, {
                   placeholder: "E-mail",
                   value: match[0],
                   onChange: handleEmailChange
+                }), React.createElement(InputText.make, {
+                  placeholder: "Password",
+                  value: match$1[0],
+                  onChange: handlePasswordChange
                 }), React.createElement("br", undefined), React.createElement(Button.make, {
                   children: "Sign in"
                 }));

@@ -2,7 +2,7 @@
 
 import * as Curry from "rescript/lib/es6/curry.js";
 
-function getValue(setter, $$event) {
+function getTargetValue(setter, $$event) {
   var value = $$event.currentTarget.value;
   return Curry._1(setter, (function (param) {
                 return value;
@@ -10,7 +10,7 @@ function getValue(setter, $$event) {
 }
 
 export {
-  getValue ,
+  getTargetValue ,
   
 }
 /* No side effect */
