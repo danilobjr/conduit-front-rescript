@@ -10,6 +10,7 @@ var inputStyle = CssJs.style([
       CssJs.borderStyle(CssJs.none),
       CssJs.borderRadius(Theme.Radius.small),
       CssJs.color(CssJs.hex(Theme.Colors.neutral)),
+      CssJs.outlineStyle(CssJs.none),
       CssJs.selector("::placeholder", [CssJs.color(CssJs.hex(Theme.Colors.neutral200))])
     ]);
 

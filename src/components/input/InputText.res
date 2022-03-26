@@ -6,6 +6,7 @@ let inputStyle = style(. [
   borderStyle(none),
   borderRadius(Theme.Radius.small),
   color(Theme.Colors.neutral->hex),
+  outlineStyle(none),
   selector(. "::placeholder", [color(Theme.Colors.neutral200->hex)]),
 ])
 
