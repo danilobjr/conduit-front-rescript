@@ -5,6 +5,7 @@ import * as React from "react";
 import * as Button from "./components/button/Button.bs.js";
 import * as JsxUtils from "./utils/JsxUtils.bs.js";
 import * as InputText from "./components/input/InputText.bs.js";
+import * as InputPassword from "./components/input/InputPassword.bs.js";
 
 Theme.setGlobalStyles(undefined);
 
@@ -27,7 +28,7 @@ function App(Props) {
                   placeholder: "E-mail",
                   value: match[0],
                   onChange: handleEmailChange
-                }), React.createElement(InputText.make, {
+                }), React.createElement(InputPassword.make, {
                   placeholder: "Password",
                   value: match$1[0],
                   onChange: handlePasswordChange

@@ -10,7 +10,7 @@ let make = () => {
 
   <div>
     <InputText placeholder="E-mail" value=email onChange=handleEmailChange />
-    <InputText placeholder="Password" value=password onChange=handlePasswordChange />
+    <InputPassword placeholder="Password" value=password onChange=handlePasswordChange />
     <br />
     <Button> "Sign in" </Button>
   </div>
