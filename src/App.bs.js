@@ -3,13 +3,26 @@
 import * as Theme from "./Theme.bs.js";
 import * as React from "react";
 import * as Button from "./components/button/Button.bs.js";
+import * as JsxUtils from "./utils/JsxUtils.bs.js";
+import * as InputText from "./components/input/InputText.bs.js";
 
 Theme.setGlobalStyles(undefined);
 
 function App(Props) {
-  return React.createElement(Button.make, {
-              children: "Sign in"
-            });
+  var match = React.useState(function () {
+        return "";
+      });
+  var setEmail = match[1];
+  var handleEmailChange = function (param) {
+    return JsxUtils.getValue(setEmail, param);
+  };
+  return React.createElement("div", undefined, React.createElement(InputText.make, {
+                  placeholder: "E-mail",
+                  value: match[0],
+                  onChange: handleEmailChange
+                }), React.createElement("br", undefined), React.createElement(Button.make, {
+                  children: "Sign in"
+                }));
 }
 
 var make = App;

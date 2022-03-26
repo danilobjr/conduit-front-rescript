@@ -4,6 +4,7 @@ import * as CssJs from "bs-css-emotion/src/CssJs.bs.js";
 
 var Colors = {
   primary: "477bff",
+  primary50: "ebf0ff",
   black: "131128",
   white: "fff",
   neutral: "282c3c",
