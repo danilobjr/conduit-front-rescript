@@ -1,4 +1,4 @@
-module TypographyCss = {
+module TypographyStyles = {
   open CssJs
 
   let title = style(. [
@@ -87,7 +87,7 @@ type variant =
 
 @react.component
 let make = (~children: string, ~variant) => {
-  open TypographyCss
+  open TypographyStyles
 
   switch variant {
   | Title => <h1 className=title> <Text> children </Text> </h1>

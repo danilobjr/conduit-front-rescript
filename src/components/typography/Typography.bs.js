@@ -120,7 +120,7 @@ var text4 = CssJs.style([
       CssJs.lineHeight(CssJs.rem(1.1))
     ]);
 
-var TypographyCss = {
+var TypographyStyles = {
   title: title,
   h1: h1,
   h2: h2,
@@ -211,7 +211,7 @@ function Typography(Props) {
 var make = Typography;
 
 export {
-  TypographyCss ,
+  TypographyStyles ,
   make ,
   
 }
