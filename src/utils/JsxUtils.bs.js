@@ -9,8 +9,13 @@ function getTargetValue(setter, $$event) {
               }));
 }
 
+function str(prim) {
+  return prim;
+}
+
 export {
   getTargetValue ,
+  str ,
   
 }
 /* No side effect */

@@ -2,13 +2,37 @@
 
 import * as CssJs from "bs-css-emotion/src/CssJs.bs.js";
 
+var from_0 = CssJs.pct(0.0);
+
+var from_1 = CssJs.hex("477bff");
+
+var from = [
+  from_0,
+  from_1
+];
+
+var to_0 = CssJs.pct(100.0);
+
+var to_1 = CssJs.hex("306aff");
+
+var to = [
+  to_0,
+  to_1
+];
+
+var BlueGradient = {
+  from: from,
+  to: to
+};
+
 var Colors = {
-  primary: "477bff",
   primary50: "ebf0ff",
+  primary300: "5786ff",
   black: "131128",
   white: "fff",
   neutral: "282c3c",
-  neutral200: "aeb3c9"
+  neutral200: "aeb3c9",
+  BlueGradient: BlueGradient
 };
 
 var family = {
@@ -49,4 +73,4 @@ export {
   setGlobalStyles ,
   
 }
-/* size Not a pure module */
+/* from Not a pure module */

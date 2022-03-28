@@ -2,39 +2,12 @@
 
 import * as Theme from "./Theme.bs.js";
 import * as React from "react";
-import * as Button from "./components/button/Button.bs.js";
-import * as JsxUtils from "./utils/JsxUtils.bs.js";
-import * as InputText from "./components/input/InputText.bs.js";
-import * as InputPassword from "./components/input/InputPassword.bs.js";
+import * as SignInPage from "./pages/SignInPage.bs.js";
 
 Theme.setGlobalStyles(undefined);
 
 function App(Props) {
-  var match = React.useState(function () {
-        return "";
-      });
-  var setEmail = match[1];
-  var match$1 = React.useState(function () {
-        return "";
-      });
-  var setPassword = match$1[1];
-  var handleEmailChange = function (param) {
-    return JsxUtils.getTargetValue(setEmail, param);
-  };
-  var handlePasswordChange = function (param) {
-    return JsxUtils.getTargetValue(setPassword, param);
-  };
-  return React.createElement("div", undefined, React.createElement(InputText.make, {
-                  placeholder: "E-mail",
-                  value: match[0],
-                  onChange: handleEmailChange
-                }), React.createElement(InputPassword.make, {
-                  placeholder: "Password",
-                  value: match$1[0],
-                  onChange: handlePasswordChange
-                }), React.createElement("br", undefined), React.createElement(Button.make, {
-                  children: "Sign in"
-                }));
+  return React.createElement(SignInPage.make, {});
 }
 
 var make = App;

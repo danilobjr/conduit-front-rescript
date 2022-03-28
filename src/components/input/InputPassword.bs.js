@@ -4,7 +4,7 @@ import * as CssJs from "bs-css-emotion/src/CssJs.bs.js";
 import * as Theme from "../../Theme.bs.js";
 import * as React from "react";
 
-var inputStyle = CssJs.style([
+var input = CssJs.style([
       CssJs.padding2(CssJs.rem(0.8), CssJs.rem(1.1)),
       CssJs.backgroundColor(CssJs.hex(Theme.Colors.primary50)),
       CssJs.borderStyle(CssJs.none),
@@ -14,13 +14,22 @@ var inputStyle = CssJs.style([
       CssJs.selector("::placeholder", [CssJs.color(CssJs.hex(Theme.Colors.neutral200))])
     ]);
 
+var InputStyles = {
+  input: input
+};
+
 function InputPassword(Props) {
+  var className = Props.className;
   var placeholderOpt = Props.placeholder;
   var value = Props.value;
   var onChange = Props.onChange;
   var placeholder = placeholderOpt !== undefined ? placeholderOpt : "";
+  var style = className !== undefined ? CssJs.merge([
+          input,
+          className
+        ]) : input;
   return React.createElement("input", {
-              className: inputStyle,
+              className: style,
               placeholder: placeholder,
               type: "password",
               value: value,
@@ -31,8 +40,8 @@ function InputPassword(Props) {
 var make = InputPassword;
 
 export {
-  inputStyle ,
+  InputStyles ,
   make ,
   
 }
-/* inputStyle Not a pure module */
+/* input Not a pure module */

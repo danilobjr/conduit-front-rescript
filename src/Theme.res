@@ -1,12 +1,18 @@
 open CssJs
 
 module Colors = {
-  let primary = "477bff"
+  /* let primary = "477bff" */
   let primary50 = "ebf0ff"
+  let primary300 = "5786ff"
   let black = "131128"
   let white = "fff"
   let neutral = "282c3c"
   let neutral200 = "aeb3c9"
+
+  module BlueGradient = {
+    let from = (0.0->pct, "477bff"->hex)
+    let to = (100.0->pct, "306aff"->hex)
+  }
 }
 
 module Font = {
