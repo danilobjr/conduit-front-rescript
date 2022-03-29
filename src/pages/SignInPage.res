@@ -13,11 +13,10 @@ module Styles = {
 let make = () => {
   <div className="sign-in-page">
     <section className="banner-section">
-      <div className="brand"> {"LIGHTNING ICON conduit"->str} </div>
-      <div className="header">
-        {"A place to share knoledge"->str} <br /> {"Where good ideas find you"->str}
-      </div>
-      <div className="image"> {"Image"->str} </div>
+      <Logo className="logo" />
+      <p className="slogan"> {"A place to share"->str} <br /> {"knoledge"->str} </p>
+      <p className="slogan-2"> {"Where good ideas find you"->str} </p>
+      <Bg />
     </section>
     <section className="form-section">
       <div className="box">
