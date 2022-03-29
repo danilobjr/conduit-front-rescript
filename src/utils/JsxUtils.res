@@ -4,3 +4,9 @@ let getTargetValue = (setter, event) => {
 }
 
 let str = React.string
+
+let classNames = (base, others) =>
+  switch others {
+  | Some(s) => `${base} ${s}`
+  | None => base
+  }

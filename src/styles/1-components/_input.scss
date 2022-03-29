@@ -1,0 +1,12 @@
+.input {
+  padding:.8rem 1.1rem;
+  background-color: $color-primary-50;
+  border: none;
+  border-radius: $radius-small;
+  color: $color-neutral-500;
+  outline: none;
+
+  &::placeholder {
+    color: $color-neutral-200;
+  } 
+}

@@ -1,4 +1,4 @@
-Theme.setGlobalStyles()
+%%raw("import './styles/index.scss'")
 
 @react.component
 let make = () => {

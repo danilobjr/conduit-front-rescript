@@ -13,9 +13,18 @@ function str(prim) {
   return prim;
 }
 
+function classNames(base, others) {
+  if (others !== undefined) {
+    return base + " " + others;
+  } else {
+    return base;
+  }
+}
+
 export {
   getTargetValue ,
   str ,
+  classNames ,
   
 }
 /* No side effect */

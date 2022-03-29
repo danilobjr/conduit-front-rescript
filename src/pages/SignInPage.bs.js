@@ -2,60 +2,12 @@
 
 import * as Link from "../components/link/Link.bs.js";
 import * as CssJs from "bs-css-emotion/src/CssJs.bs.js";
-import * as Theme from "../Theme.bs.js";
 import * as React from "react";
 import * as Button from "../components/button/Button.bs.js";
 import * as JsxUtils from "../utils/JsxUtils.bs.js";
 import * as InputText from "../components/input/InputText.bs.js";
 import * as Typography from "../components/typography/Typography.bs.js";
 import * as InputPassword from "../components/input/InputPassword.bs.js";
-
-var page = CssJs.style([
-      CssJs.height(CssJs.vh(100.0)),
-      CssJs.display(CssJs.flexBox)
-    ]);
-
-var bannerSection = CssJs.style([
-      CssJs.background(CssJs.linearGradient(CssJs.deg(0.0), [
-                Theme.Colors.BlueGradient.from,
-                Theme.Colors.BlueGradient.to
-              ])),
-      CssJs.flex({
-            NAME: "num",
-            VAL: 1.0
-          })
-    ]);
-
-var brand = CssJs.style([]);
-
-var header = CssJs.style([]);
-
-var image = CssJs.style([]);
-
-var formSection = CssJs.style([
-      CssJs.flex({
-            NAME: "num",
-            VAL: 1.0
-          }),
-      CssJs.display(CssJs.flexBox),
-      CssJs.alignItems(CssJs.center),
-      CssJs.justifyContent(CssJs.center)
-    ]);
-
-var box = CssJs.style([
-      CssJs.maxWidth(CssJs.px(400)),
-      CssJs.flex({
-            NAME: "num",
-            VAL: 1.0
-          })
-    ]);
-
-var title = CssJs.style([
-      CssJs.marginTop(CssJs.zero),
-      CssJs.marginBottom(CssJs.rem(0.6))
-    ]);
-
-var signup = CssJs.style([]);
 
 var form = CssJs.style([
       CssJs.marginTop(CssJs.rem(2.0)),
@@ -68,15 +20,6 @@ var formMarginTop = CssJs.style([CssJs.marginTop(CssJs.rem(1.2))]);
 var skip = CssJs.style([CssJs.marginTop(CssJs.rem(2.0))]);
 
 var Styles = {
-  page: page,
-  bannerSection: bannerSection,
-  brand: brand,
-  header: header,
-  image: image,
-  formSection: formSection,
-  box: box,
-  title: title,
-  signup: signup,
   form: form,
   formMarginTop: formMarginTop,
   skip: skip
@@ -84,31 +27,31 @@ var Styles = {
 
 function SignInPage(Props) {
   return React.createElement("div", {
-              className: page
+              className: "sign-in-page"
             }, React.createElement("section", {
-                  className: bannerSection
+                  className: "banner-section"
                 }, React.createElement("div", {
-                      className: brand
+                      className: "brand"
                     }, JsxUtils.str("LIGHTNING ICON conduit")), React.createElement("div", {
-                      className: header
+                      className: "header"
                     }, JsxUtils.str("A place to share knoledge"), React.createElement("br", undefined), JsxUtils.str("Where good ideas find you")), React.createElement("div", {
-                      className: image
+                      className: "image"
                     }, JsxUtils.str("Image"))), React.createElement("section", {
-                  className: formSection
+                  className: "form-section"
                 }, React.createElement("div", {
-                      className: box
+                      className: "box"
                     }, React.createElement(Typography.Title.make, {
                           children: "Sign in",
-                          className: title
+                          className: "title"
                         }), React.createElement("div", {
-                          className: signup
+                          className: "signup"
                         }, React.createElement(Typography.$$Text.make, {
                               children: "Don't have an account?"
                             }), JsxUtils.str(" "), React.createElement(Link.make, {
                               children: JsxUtils.str("Sign up"),
                               to: "#"
                             })), React.createElement("form", {
-                          className: form
+                          className: "form"
                         }, React.createElement(InputText.make, {
                               placeholder: "E-mail",
                               value: "",
@@ -117,7 +60,7 @@ function SignInPage(Props) {
                                   
                                 })
                             }), React.createElement(InputPassword.make, {
-                              className: formMarginTop,
+                              className: "-mt",
                               placeholder: "Password",
                               value: "",
                               onChange: (function (prim) {
@@ -126,9 +69,9 @@ function SignInPage(Props) {
                                 })
                             }), React.createElement(Button.make, {
                               children: "Sign in",
-                              className: formMarginTop
+                              className: "-mt"
                             })), React.createElement("div", {
-                          className: skip
+                          className: "skip"
                         }, React.createElement(Typography.$$Text.make, {
                               children: "Skip sign-in for now and"
                             }), JsxUtils.str(" "), React.createElement(Link.make, {
@@ -144,4 +87,4 @@ export {
   make ,
   
 }
-/* page Not a pure module */
+/* form Not a pure module */

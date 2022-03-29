@@ -1,0 +1,39 @@
+.sign-in-page {
+  height: 100vh;
+  display: flex;
+
+  > .banner-section {
+    background: $color-bg-blue-gradient;
+    flex: 1;
+  }
+
+  > .form-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    > .box {
+      max-width: 400px;
+      flex: 1;
+    }
+
+    > .box > .title {
+      margin: 0 0 .6rem;
+    }
+
+    > .box > .form {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    > .box > .form > .-mt {
+      margin-top: 1.2rem;
+    }
+
+    > .box > .skip {
+      margin-top: 2rem;
+    }
+  }
+}
