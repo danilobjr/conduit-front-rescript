@@ -1,13 +1,13 @@
 # rescript-conduit-front
 
-Frontend of [Conduit app](https://github.com/gothinkster/realworld) made in ReScript.
+Frontend of [Conduit app](https://github.com/gothinkster/realworld) made in [ReScript](https://rescript-lang.org/).
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Requirements
 
-- Yarn 1.x
-- NodeJs
+- [Yarn 1.x](https://yarnpkg.com/getting-started/install)
+- [NodeJs](https://nodejs.org/)
 
 ## Up and Running
 
