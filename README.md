@@ -33,6 +33,4 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser. 
 
 ## License
 
-MIT
-
-Made with <stroke>love</stroke> _a keyboard_ by [Danilo Barros](https://github.com/danilobjr).
+MIT © Made with <strike>love</strike> _a keyboard_ by [Danilo Barros]("https://danilobjr.mit-license.org/").
