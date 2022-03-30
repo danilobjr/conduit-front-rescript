@@ -1,0 +1,41 @@
+.top-bar {
+  height: 5rem;
+  padding: 0 3.6rem;
+  border-bottom: 1px solid adjust-color($color-primary-300, $alpha: -.9);
+  display: flex;
+  align-items: center;
+
+  > .navigation {
+    padding: 0;
+    margin: 0 0 0 3.5rem;
+    list-style: none;
+    flex: 1;
+    display: flex;
+
+    > .item:not(:first-of-type) {
+      margin-left: 1.2rem;
+    }
+  }
+
+  > .user-account {
+    display: flex;
+    align-items: center;
+
+    > .figure {
+      width: 2.4rem;
+      height: 2.4rem;
+      margin: 0 0 0 1.2rem;
+      background-color: $color-neutral-100;
+      border: 2px solid $color-primary-300;
+      border-radius: 50%;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    > .figure > .icon {
+      fill: $color-neutral-400;
+    }
+  }
+}
