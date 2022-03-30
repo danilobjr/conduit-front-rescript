@@ -2,5 +2,5 @@
 
 @react.component
 let make = () => {
-  <SignInPage />
+  <Feed />
 }

@@ -4,11 +4,17 @@ import * as React from "react";
 import * as JsxUtils from "../utils/JsxUtils.bs.js";
 
 function Link(Props) {
-  var className = Props.className;
+  var activeOpt = Props.active;
   var children = Props.children;
+  var className = Props.className;
+  var menuItemOpt = Props.menuItem;
   var to = Props.to;
+  var active = activeOpt !== undefined ? activeOpt : false;
+  var menuItem = menuItemOpt !== undefined ? menuItemOpt : false;
+  var menuItemClassName = menuItem ? "-menu-item" : "";
+  var activeClassName = active ? "-active" : "";
   return React.createElement("a", {
-              className: JsxUtils.classNames("link", className),
+              className: JsxUtils.classNames("link " + menuItemClassName + " " + activeClassName, className),
               href: to
             }, children);
 }
