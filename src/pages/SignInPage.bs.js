@@ -33,7 +33,7 @@ function SignInPage(Props) {
             }, React.createElement("section", {
                   className: "banner-section"
                 }, React.createElement(Logo.make, {
-                      className: "logo"
+                      white: true
                     }), React.createElement("p", {
                       className: "slogan"
                     }, JsxUtils.str("A place to share"), React.createElement("br", undefined), JsxUtils.str("knoledge")), React.createElement("p", {

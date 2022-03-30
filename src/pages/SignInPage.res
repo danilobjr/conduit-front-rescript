@@ -13,7 +13,7 @@ module Styles = {
 let make = () => {
   <div className="sign-in-page">
     <section className="banner-section">
-      <Logo className="logo" />
+      <Logo white=true />
       <p className="slogan"> {"A place to share"->str} <br /> {"knoledge"->str} </p>
       <p className="slogan-2"> {"Where good ideas find you"->str} </p>
       <Bg />
