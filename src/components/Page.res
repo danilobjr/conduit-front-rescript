@@ -3,7 +3,7 @@ open JsxUtils
 module Container = {
   @react.component
   let make = (~children, ~className=?) => {
-    <div className={classNames("page-wrapper", className)}> children </div>
+    <div className={classNames("page-container", className)}> children </div>
   }
 }
 
