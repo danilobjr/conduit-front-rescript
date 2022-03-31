@@ -1,5 +1,5 @@
 module Person = {
-  @module("../assets/person_black_24dp.svg") @react.component
+  @module("../assets/person.svg") @react.component
   external make: (~className: string) => React.element = "ReactComponent"
 }
 
