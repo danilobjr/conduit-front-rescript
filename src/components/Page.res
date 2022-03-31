@@ -1,6 +1,6 @@
 open JsxUtils
 
-module Wrapper = {
+module Container = {
   @react.component
   let make = (~children, ~className=?) => {
     <div className={classNames("page-wrapper", className)}> children </div>
@@ -21,5 +21,5 @@ let make = (~children, ~className=?) => {
   | None => ""
   }
 
-  <Wrapper className=wrapperClassName> <TopBar /> <Content> children </Content> </Wrapper>
+  <Container className=wrapperClassName> <TopBar /> <Content> children </Content> </Container>
 }
