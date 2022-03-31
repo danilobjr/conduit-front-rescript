@@ -1,9 +1,9 @@
 open JsxUtils
 
-module Navigation = {
+module Nav = {
   @react.component
   let make = () => {
-    <ul className="navigation">
+    <ul className="nav">
       <li className="item"> <Link menuItem=true active=true to="#"> {"Home"->str} </Link> </li>
       <li className="item">
         <Link menuItem=true active=false to="#"> {"New article"->str} </Link>
@@ -24,5 +24,5 @@ module UserAccount = {
 
 @react.component
 let make = () => {
-  <div className="top-bar"> <Logo /> <Navigation /> <UserAccount /> </div>
+  <div className="top-bar"> <Logo /> <Nav /> <UserAccount /> </div>
 }
