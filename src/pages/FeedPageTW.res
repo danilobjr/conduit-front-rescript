@@ -14,8 +14,6 @@ module Tab = {
       | false => ""
       }
 
-      Js.log(activeClasses)
-
       <li className={`py-2 px-4 rounded-lg ${activeClasses}`}> children </li>
     }
   }
