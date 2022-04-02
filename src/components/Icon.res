@@ -29,7 +29,7 @@ let make = (~className=?, ~variant) => {
 
   switch variant {
   | #person => <Person className=cssClasses />
-  | #favorite => <Favorite className=cssClasses />
+  | #favorite => <Favorite.Filled className=cssClasses />
   | #favoriteOutline => <Favorite.Outline className=cssClasses />
   }
 }
