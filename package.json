@@ -40,8 +40,11 @@
   },
   "devDependencies": {
     "@rescript/react": "0.10.3",
+    "autoprefixer": "10.4.4",
     "bs-css-emotion": "4.2.0",
+    "postcss": "8.4.12",
     "rescript": "9.1.4",
-    "sass": "1.49.9"
+    "sass": "1.49.9",
+    "tailwindcss": "3.0.23"
   }
 }
