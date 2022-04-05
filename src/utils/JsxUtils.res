@@ -10,3 +10,5 @@ let classNames = (base, others) =>
   | Some(s) => `${base} ${s}`
   | None => base
   }
+
+let whiteSpace = {" "->s}

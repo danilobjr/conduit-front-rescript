@@ -36,8 +36,8 @@ let make = () => {
       <div className=Style.formBox>
         /* <h1 className=Style.title> {"Sign in"->s} </h1> */
         <div className=Style.signUp>
-          {" "->str}
           <span className=Style.text> {"Don't have an account?"->s} </span>
+          whiteSpace
           <Link to="#"> {"Sign up"->s} </Link>
         </div>
         <form className=Style.form>
@@ -48,8 +48,8 @@ let make = () => {
           <Button className=Style.button> "Sign in" </Button>
         </form>
         <div className=Style.skip>
-          {" "->str}
           <span className=Style.text> {"Skip sign-in for now and"->s} </span>
+          whiteSpace
           <Link to="#"> {"start reading"->s} </Link>
         </div>
       </div>
