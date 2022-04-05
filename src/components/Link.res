@@ -10,15 +10,6 @@ let make = (~children, ~variant=Normal, ~to) => {
   | MenuItem(Active(true)) => "text-primary"
   | MenuItem(Active(false)) => ""
   }
-  /* let menuItemClassName = switch menuItem { */
-  /* | true => "-menu-item" */
-  /* | false => "" */
-  /* } */
-
-  /* let activeClassName = switch active { */
-  /* | true => "-active" */
-  /* | false => "" */
-  /* } */
 
   <a className=classes href=to> children </a>
 }
