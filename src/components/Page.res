@@ -1,15 +1,19 @@
+module Style = {
+  let container = "grid grid-rows-[auto_1fr] h-full"
+  let content = "bg-neutral-50"
+}
 
 module Container = {
   @react.component
   let make = (~children) => {
-    <div className="grid grid-rows-[auto_1fr] h-full"> children </div>
+    <div className=Style.container> children </div>
   }
 }
 
 module Content = {
   @react.component
   let make = (~children) => {
-    <div className="bg-neutral-50"> children </div>
+    <div className=Style.content> children </div>
   }
 }
 
