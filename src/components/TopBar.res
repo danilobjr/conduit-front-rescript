@@ -14,13 +14,13 @@ module Nav = {
   let make = () => {
     <ul className=Styles.nav>
       <li className=Styles.navItem>
-        <Link variant=MenuItem(Active(true)) to="#"> {"Home"->str} </Link>
+        <Link variant=MenuItem(Active(true)) to="#"> {"Home"->s} </Link>
       </li>
       <li className=Styles.navItem>
-        <Link variant=MenuItem(Active(false)) to="#"> {"New article"->str} </Link>
+        <Link variant=MenuItem(Active(false)) to="#"> {"New article"->s} </Link>
       </li>
       <li className=Styles.navItem>
-        <Link variant=MenuItem(Active(false)) to="#"> {"Settings"->str} </Link>
+        <Link variant=MenuItem(Active(false)) to="#"> {"Settings"->s} </Link>
       </li>
     </ul>
   }
@@ -30,8 +30,8 @@ module UserAccount = {
   @react.component
   let make = () => {
     <div className=Styles.userBox>
-      <span> {"@username"->str} </span>
-      <div className=Styles.avatar> <Icon variant=#person /> </div>
+      <span> {"@username"->s} </span>
+      <div className=Styles.avatar> <Icon variant=Icon.Person /> </div>
     </div>
   }
 }

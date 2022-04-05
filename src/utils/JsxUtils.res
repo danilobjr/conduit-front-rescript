@@ -3,7 +3,7 @@ let getTargetValue = (setter, event) => {
   setter(_ => value)
 }
 
-let str = React.string
+let s = React.string
 
 let classNames = (base, others) =>
   switch others {

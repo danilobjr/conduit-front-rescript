@@ -28,17 +28,17 @@ let make = () => {
     <section className=Style.bannerSection>
       /* TODO create a Colors module? */
       <Logo color=Logo.White />
-      <p className=Style.slogan> {"A place to share"->str} <br /> {"knoledge"->str} </p>
-      <p className=Style.slogan2> {"Where good ideas find you"->str} </p>
+      <p className=Style.slogan> {"A place to share"->s} <br /> {"knoledge"->s} </p>
+      <p className=Style.slogan2> {"Where good ideas find you"->s} </p>
       <Bg className=Style.bg />
     </section>
     <section className=Style.formSection>
       <div className=Style.formBox>
-        <h1 className=Style.title> {"Sign in"->str} </h1>
+        /* <h1 className=Style.title> {"Sign in"->s} </h1> */
         <div className=Style.signUp>
-          <span className=Style.text> {"Don't have an account?"->str} </span>
           {" "->str}
-          <Link to="#"> {"Sign up"->str} </Link>
+          <span className=Style.text> {"Don't have an account?"->s} </span>
+          <Link to="#"> {"Sign up"->s} </Link>
         </div>
         <form className=Style.form>
           <InputText className=Style.inputEmail placeholder="E-mail" value="" onChange={Js.log} />
@@ -48,9 +48,9 @@ let make = () => {
           <Button className=Style.button> "Sign in" </Button>
         </form>
         <div className=Style.skip>
-          <span className=Style.text> {"Skip sign-in for now and"->str} </span>
           {" "->str}
-          <Link to="#"> {"start reading"->str} </Link>
+          <span className=Style.text> {"Skip sign-in for now and"->s} </span>
+          <Link to="#"> {"start reading"->s} </Link>
         </div>
       </div>
     </section>

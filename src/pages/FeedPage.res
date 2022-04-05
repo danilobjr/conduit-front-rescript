@@ -92,7 +92,7 @@ module Article = {
       let make = (~amount) => {
         <div className="flex ml-10">
           <Icon className="fill-gray-400" variant=#favoriteOutline />
-          <span className="ml-3"> {amount->Belt.Int.toString->str} </span>
+          <span className="ml-3"> {amount->Belt.Int.toString->s} </span>
         </div>
       }
     }
@@ -111,8 +111,8 @@ module Article = {
       <div className="mt-6 flex items-center">
         <img className="mr-4" src=userAvatarSrc />
         <div className="flex flex-col">
-          <span className="text-sm font-medium"> {userName->str} </span>
-          <span className="text-sm text-gray-400"> {postDate->str} </span>
+          <span className="text-sm font-medium"> {userName->s} </span>
+          <span className="text-sm text-gray-400"> {postDate->s} </span>
         </div>
       </div>
     }
@@ -134,20 +134,20 @@ let make = () => {
   <Page>
     <Container>
       <Tab>
-        <Tab.Item active=true> {"Your feed"->str} </Tab.Item>
-        <Tab.Item> {"Global feed"->str} </Tab.Item>
+        <Tab.Item active=true> {"Your feed"->s} </Tab.Item>
+        <Tab.Item> {"Global feed"->s} </Tab.Item>
       </Tab>
       <div className="grid grid-cols-3 gap-8">
         <Feed>
           <Article>
             <Article.Header>
               <Article.Header.Title>
-                {"Node.js & JavaScript Testing Best Practices"->str}
+                {"Node.js & JavaScript Testing Best Practices"->s}
               </Article.Header.Title>
               <Article.Header.Likes amount=234 />
             </Article.Header>
             <Article.Body>
-              {"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum ..."->str}
+              {"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum ..."->s}
             </Article.Body>
             <Article.Footer
               postDate="May 4, 2021" userAvatarSrc="avatar-1.png" userName="alexturner"
@@ -156,12 +156,12 @@ let make = () => {
           <Article>
             <Article.Header>
               <Article.Header.Title>
-                {"Node.js & JavaScript Testing Best Practices"->str}
+                {"Node.js & JavaScript Testing Best Practices"->s}
               </Article.Header.Title>
               <Article.Header.Likes amount=234 />
             </Article.Header>
             <Article.Body>
-              {"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum ..."->str}
+              {"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum ..."->s}
             </Article.Body>
             <Article.Footer
               postDate="May 4, 2021" userAvatarSrc="avatar-1.png" userName="alexturner"
@@ -170,23 +170,23 @@ let make = () => {
         </Feed>
         <aside>
           <div className="">
-            <h4 className="-mt-1 text-2xl font-medium"> {"Popular tags"->str} </h4>
+            <h4 className="-mt-1 text-2xl font-medium"> {"Popular tags"->s} </h4>
             <div className="flex flex-wrap mt-6 gap-2">
-              <Tag> {"css"->str} </Tag>
-              <Tag> {"javascript"->str} </Tag>
-              <Tag> {"java"->str} </Tag>
-              <Tag> {"html"->str} </Tag>
-              <Tag> {"rescript"->str} </Tag>
-              <Tag> {"react"->str} </Tag>
-              <Tag> {"react native"->str} </Tag>
-              <Tag> {"flutter"->str} </Tag>
-              <Tag> {"git"->str} </Tag>
-              <Tag> {"nodejs"->str} </Tag>
-              <Tag> {"github"->str} </Tag>
-              <Tag> {"design"->str} </Tag>
-              <Tag> {"ui design"->str} </Tag>
-              <Tag> {"ux design"->str} </Tag>
-              <Tag> {"devops"->str} </Tag>
+              <Tag> {"css"->s} </Tag>
+              <Tag> {"javascript"->s} </Tag>
+              <Tag> {"java"->s} </Tag>
+              <Tag> {"html"->s} </Tag>
+              <Tag> {"rescript"->s} </Tag>
+              <Tag> {"react"->s} </Tag>
+              <Tag> {"react native"->s} </Tag>
+              <Tag> {"flutter"->s} </Tag>
+              <Tag> {"git"->s} </Tag>
+              <Tag> {"nodejs"->s} </Tag>
+              <Tag> {"github"->s} </Tag>
+              <Tag> {"design"->s} </Tag>
+              <Tag> {"ui design"->s} </Tag>
+              <Tag> {"ux design"->s} </Tag>
+              <Tag> {"devops"->s} </Tag>
             </div>
           </div>
         </aside>
