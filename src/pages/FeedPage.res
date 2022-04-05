@@ -91,7 +91,7 @@ module Article = {
       @react.component
       let make = (~amount) => {
         <div className="flex ml-10">
-          <Icon className="fill-gray-400" variant=#favoriteOutline />
+          <Icon className="fill-gray-400" variant=Icon.FavoriteOutline />
           <span className="ml-3"> {amount->Belt.Int.toString->s} </span>
         </div>
       }

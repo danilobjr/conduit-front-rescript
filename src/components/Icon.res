@@ -15,21 +15,18 @@ module Favorite = {
   }
 }
 
-type icons = [
-  | #person
-  | #favoriteOutline
-]
+type icons =
+  | Person
+  | Favorite
+  | FavoriteOutline
 
 @react.component
 let make = (~className=?, ~variant) => {
-  let cssClasses = switch className {
-  | Some(c) => `icon ${c}`
-  | None => "icon"
-  }
+  let classes = JsxUtils.classNames("icon", className)
 
   switch variant {
-  | #person => <Person className=cssClasses />
-  | #favorite => <Favorite.Filled className=cssClasses />
-  | #favoriteOutline => <Favorite.Outline className=cssClasses />
+  | Person => <Person className=classes />
+  | Favorite => <Favorite.Filled className=classes />
+  | FavoriteOutline => <Favorite.Outline className=classes />
   }
 }
