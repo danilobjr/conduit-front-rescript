@@ -1,4 +1,5 @@
 open JsxUtils
+open Typography
 
 module Style = {
   let pageContainer = "grid grid-cols-2"
@@ -35,6 +36,7 @@ let make = () => {
     <section className=Style.formSection>
       <div className=Style.formBox>
         /* <h1 className=Style.title> {"Sign in"->s} </h1> */
+        <Title> "Sign in" </Title>
         <div className=Style.signUp>
           <span className=Style.text> {"Don't have an account?"->s} </span>
           whiteSpace
