@@ -1,6 +1,6 @@
 module Style = {
   let container = "grid grid-rows-[auto_1fr] h-full"
-  let content = "bg-neutral-50"
+  let content = "bg-neutral-100 overflow-y-auto"
 }
 
 module Container = {
