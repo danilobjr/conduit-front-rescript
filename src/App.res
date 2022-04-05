@@ -1,6 +1,6 @@
-%%raw("import './styles/index.scss'")
+%%raw("import './index.css'")
 
 @react.component
 let make = () => {
-  <FeedPageTW />
+  <FeedPage />
 }

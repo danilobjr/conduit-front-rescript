@@ -1,25 +1,19 @@
-open JsxUtils
 
 module Container = {
   @react.component
-  let make = (~children, ~className=?) => {
-    <div className={classNames("page-container", className)}> children </div>
+  let make = (~children) => {
+    <div className="grid grid-rows-[auto_1fr] h-full"> children </div>
   }
 }
 
 module Content = {
   @react.component
-  let make = (~children, ~className=?) => {
-    <div className={classNames("page-content", className)}> children </div>
+  let make = (~children) => {
+    <div className="bg-neutral-50"> children </div>
   }
 }
 
 @react.component
-let make = (~children, ~className=?) => {
-  let wrapperClassName = switch className {
-  | Some(c) => c
-  | None => ""
-  }
-
-  <Container className=wrapperClassName> <TopBar /> <Content> children </Content> </Container>
+let make = (~children) => {
+  <Container> <TopBar /> <Content> children </Content> </Container>
 }
