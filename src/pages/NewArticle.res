@@ -9,17 +9,6 @@ module Style = {
   let formActions = "flex justify-end mt-6"
 }
 
-let append = (xs, x) => Belt.Array.concat(xs, [x])
-
-// TODO extract to its own file
-module Textarea = {
-  let style = "h-[10em] py-3 px-5 bg-neutral-100 border-zero rounded-md resize-none"
-
-  @react.component
-  let make = (~placeholder, ~value, ~onChange) => {
-    <textarea className=style placeholder value onChange />
-  }
-}
 
 // TODO extract to its own file
 module InputTags = {
