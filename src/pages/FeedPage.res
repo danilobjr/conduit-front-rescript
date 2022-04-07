@@ -1,144 +1,20 @@
 open JsxUtils
 
-module Tab = {
-  @react.component
-  let make = (~children) => {
-    <ul className="flex"> children </ul>
-  }
-
-  module Item = {
-    @react.component
-    let make = (~active=false, ~children) => {
-      let activeClasses = switch active {
-      | true => "text-white font-bold bg-blue-400"
-      | false => ""
-      }
-
-      <li className={`py-2 px-4 rounded-lg ${activeClasses}`}> children </li>
-    }
-  }
-}
-
-module Container = {
-  @react.component
-  let make = (~children) => {
-    <div className="grid grid-cols-1 gap-4 container mx-auto py-4"> children </div>
-  }
-}
-
-module Feed = {
-  @react.component
-  let make = (~children) => {
-    <section className="flex flex-col gap-12 col-span-2"> children </section>
-  }
-}
-
-module Card = {
-  @react.component
-  let make = (~children) => {
-    <div className="bg-gray-200 rounded-xl"> children </div>
-  }
-
-  module Header = {
-    @react.component
-    let make = (~children) => {
-      <div className="flex p-6"> children </div>
-    }
-
-    module Title = {
-      @react.component
-      let make = (~children) => {
-        <h4 className="-mt-1 text-2xl font-medium"> children </h4>
-      }
-    }
-  }
-
-  module Body = {
-    @react.component
-    let make = (~children) => {
-      <div className="px-6"> children </div>
-    }
-  }
-
-  module Footer = {
-    @react.component
-    let make = (~className=?, ~children) => {
-      <div className={classNames("p-6", className)}> children </div>
-    }
-  }
-}
-
-module Article = {
-  @react.component
-  let make = (~children) => {
-    <div> children </div>
-  }
-
-  module Header = {
-    @react.component
-    let make = (~children) => {
-      <div className="flex"> children </div>
-    }
-
-    module Title = {
-      @react.component
-      let make = (~children) => {
-        <h4 className="-mt-1 text-2xl font-medium"> children </h4>
-      }
-    }
-
-    module Likes = {
-      @react.component
-      let make = (~amount) => {
-        <div className="flex ml-10">
-          <Icon className="fill-gray-400" variant=Icon.FavoriteOutline />
-          <span className="ml-3"> {amount->Belt.Int.toString->s} </span>
-        </div>
-      }
-    }
-  }
-
-  module Body = {
-    @react.component
-    let make = (~children) => {
-      <div className="mt-6"> children </div>
-    }
-  }
-
-  module Footer = {
-    @react.component
-    let make = (~postDate, ~userAvatarSrc, ~userName) => {
-      <div className="mt-6 flex items-center">
-        <img className="mr-4" src=userAvatarSrc />
-        <div className="flex flex-col">
-          <span className="text-sm font-medium"> {userName->s} </span>
-          <span className="text-sm text-gray-400"> {postDate->s} </span>
-        </div>
-      </div>
-    }
-  }
-}
-
-module Tag = {
-  @react.component
-  let make = (~children) => {
-    <span
-      className="py-1 px-3 text-gray-500 rounded-2xl shadow-md cursor-pointer hover:text-inherit hover:shadow-xl">
-      children
-    </span>
-  }
+module Style = {
+  let container = "grid grid-cols-1 gap-4 container mx-auto p-8"
+  let feed = "flex flex-col gap-12 col-span-2"
 }
 
 @react.component
 let make = () => {
   <Page>
-    <Container>
+    <div className=Style.container>
       <Tab>
         <Tab.Item active=true> {"Your feed"->s} </Tab.Item>
         <Tab.Item> {"Global feed"->s} </Tab.Item>
       </Tab>
       <div className="grid grid-cols-3 gap-8">
-        <Feed>
+        <div className=Style.feed>
           <Article>
             <Article.Header>
               <Article.Header.Title>
@@ -167,7 +43,7 @@ let make = () => {
               postDate="May 4, 2021" userAvatarSrc="avatar-1.png" userName="alexturner"
             />
           </Article>
-        </Feed>
+        </div>
         <aside>
           <div className="">
             <h4 className="-mt-1 text-2xl font-medium"> {"Popular tags"->s} </h4>
@@ -191,6 +67,6 @@ let make = () => {
           </div>
         </aside>
       </div>
-    </Container>
+    </div>
   </Page>
 }
