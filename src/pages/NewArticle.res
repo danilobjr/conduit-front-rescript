@@ -1,4 +1,3 @@
-open JsxUtils
 open Typography
 
 module Style = {
@@ -18,21 +17,17 @@ let make = () => {
       <div className=Style.card>
         <Title> "New article" </Title>
         <form>
-          <div className=Style.formElement>
-            <label className=Style.label> {"Title"->s} </label>
+          <Form.Control label="Title">
             <InputText placeholder="Article title" value="" onChange=Js.log />
-          </div>
-          <div className=Style.formElement>
-            <label className=Style.label> {"About"->s} </label>
+          </Form.Control>
+          <Form.Control label="About">
             <InputText placeholder="What's this article about?" value="" onChange=Js.log />
-          </div>
-          <div className=Style.formElement>
+          </Form.Control>
+          <Form.Control label="About">
             <Textarea placeholder="Write your article (in markdown)" value="" onChange=Js.log />
-          </div>
-          <div className=Style.formElement>
-            <label className=Style.label> {"Tags"->s} </label> <InputTags value=tags />
-          </div>
-          <div className=Style.formActions> <Button> "Publish article" </Button> </div>
+          </Form.Control>
+          <Form.Control label="Tags"> <InputTags value=tags /> </Form.Control>
+          <Form.Actions> <Button> "Publish article" </Button> </Form.Actions>
         </form>
       </div>
     </div>
