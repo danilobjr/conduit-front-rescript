@@ -23,7 +23,7 @@ let make = () => {
           <Form.Control label="About">
             <InputText placeholder="What's this article about?" value="" onChange=Js.log />
           </Form.Control>
-          <Form.Control label="About">
+          <Form.Control>
             <Textarea placeholder="Write your article (in markdown)" value="" onChange=Js.log />
           </Form.Control>
           <Form.Control label="Tags"> <InputTags value=tags /> </Form.Control>
