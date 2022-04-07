@@ -7,10 +7,13 @@ module Control = {
   }
 
   @react.component
-  let make = (~children, ~label) => {
-    <div className=Style.container>
-      <label className=Style.label> {label->s} </label> children
-    </div>
+  let make = (~children, ~className=?, ~label=?) => {
+    let label' = switch label {
+    | None => React.null
+    | Some(l) => <label className=Style.label> {l->s} </label>
+    }
+
+    <div className={classNames(Style.container, className)}> label' children </div>
   }
 }
 
