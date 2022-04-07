@@ -3,9 +3,6 @@ open Typography
 module Style = {
   let container = "p-12"
   let card = "mx-auto max-w-2xl p-12 bg-white rounded-md"
-  let formElement = "flex flex-col mt-6"
-  let label = "mb-1 font-medium"
-  let formActions = "flex justify-end mt-6"
 }
 
 let tags = ["git", "javascript", "rescript"]
